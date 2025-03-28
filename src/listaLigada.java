@@ -36,13 +36,11 @@ public class listaLigada<TIPO> {
         if (primeiro == null && ultimo == null) {
             this.primeiro = novoElemento;
             this.ultimo = novoElemento;
-            this.tamanho++;
         } else {
             this.ultimo.setProximo(novoElemento);
             this.ultimo = novoElemento;
-            this.tamanho++;
-            
         }
+        this.tamanho++;
     }
 
     public void remover(TIPO valorProcurado) {
@@ -73,7 +71,7 @@ public class listaLigada<TIPO> {
     }
 
     public Elemento<TIPO> get(int posicao){
-        Elemento atual = this.primeiro;
+        Elemento<TIPO> atual = this.primeiro;
         for (int i = 0; i < posicao; i++) {
             if(atual.getProximo() != null) {
                 atual = atual.getProximo();

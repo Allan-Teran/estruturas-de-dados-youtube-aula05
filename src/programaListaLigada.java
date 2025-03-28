@@ -3,7 +3,7 @@ import javax.print.DocFlavor.STRING;
 public class programaListaLigada {
     public static void main(String[] args) {
         
-        listaLigada<STRING> lista = new listaLigada<STRING>();
+        listaLigada<String> lista = new listaLigada<String>();
         lista.adicionar("AC");
         lista.adicionar("BA");
         lista.adicionar("CE");
