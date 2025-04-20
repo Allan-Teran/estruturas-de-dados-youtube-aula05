@@ -8,7 +8,7 @@ public class comparacao {
 
         //adicionar elementos
 
-        int limite = 1000000;
+        int limite = 10000;
         long tempoInicial = System.currentTimeMillis();
         long tempoFinal;
 
@@ -35,15 +35,19 @@ public class comparacao {
             vetor.get(i);
         }
         tempoFinal = System.currentTimeMillis();
-        System.out.println("----------------------------");
+        System.out.println("----------------------------/n/n tempo vetor");
         System.out.println(tempoFinal - tempoInicial);
 
         tempoInicial = System.currentTimeMillis();
+        IteratorListaLigada<Integer> iterator = lista.getIterator();
+        while(iterator.temProximo()) {
+            iterator.getProximo();
+        }
         for(int i = 0; i < lista.getTamanho(); i++) {
             lista.get(i);
         }
         tempoFinal = System.currentTimeMillis();
-        System.out.println("----------------------------");
+        System.out.println("----------------------------/n/n tempo lista");
         System.out.println(tempoFinal - tempoInicial);
     }
 }
